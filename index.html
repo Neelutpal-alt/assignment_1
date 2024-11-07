@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+   <meta charset="UTF-8">
+   <title>My Personal Webpage</title>
+   
+   <!-- Add AngularJS Library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+   <!-- Add CSS Styles -->
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #f4f4f9;
+         color: #333;
+         margin: 0;
+         padding: 20px;
+      }
+
+      h1, h2 {
+         color: #005b96;
+      }
+
+      h1 {
+         font-size: 2.5em;
+         text-align: center;
+      }
+
+      h2 {
+         font-size: 1.8em;
+         margin-top: 20px;
+         border-bottom: 2px solid #005b96;
+         padding-bottom: 5px;
+      }
+
+      section {
+         background: #ffffff;
+         padding: 15px;
+         border-radius: 8px;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+         margin-bottom: 20px;
+      }
+
+      ul {
+         list-style-type: none;
+         padding: 0;
+      }
+
+      li {
+         padding: 8px;
+         background: #e6f7ff;
+         border-radius: 4px;
+         margin: 5px 0;
+      }
+   </style>
+</head>
+<body ng-controller="MainController">
+
+   <h1>Welcome to My Personal Website Webpage</h1>
+   
+   <section>
+      <h2>About Me</h2>
+      <p>I am Nilutpal Talukdar from Ghy,Assam.A passionate individual with an eyes on entering the tech industry,currenty pursuing my Bachelor degree in BCA at Assam down town University</p>
+   </section>
+
+   <section>
+      <h2>Hobbies</h2>
+      <ul>
+         <li ng-repeat="hobby in hobbies">Gaming</li>
+         <li ng-repeat="hobby in hobbies">Fitness</li>
+         <li ng-repeat="hobby in hobbies">Travelling</li>
+         <li ng-repeat="hobby in hobbies">Sports</li>
+         <li ng-repeat="hobby in hobbies">Exploring new things</li>
+         
+         
+      </ul>
+   </section>
+
+   <section>
+      <h2>Family</h2>
+      <ul>
+         <li ng-repeat="member in family">Rohan Das- Father</li>
+         <li ng-repeat="member in family">Richa- Mother</li>
+         <li ng-repeat="member in family">Abhi- Brother</li>
+      </ul>
+   </section>
+
+   <section>
+      <h2>Education</h2>
+      <ul>
+         <li ng-repeat="edu in education">Schooling: Pragjyotish School</li>
+         <li ng-repeat="edu in education">Pursuing BCA: Assam down town University</li>
+      </ul>
+   </section>
+
+   <section>
+      <h2>Achievements</h2>
+      <ul>
+         <li ng-repeat="achievement in achievements">{{ achievement }}</li>
+      </ul>
+   </section>
+
+   <section>
+      <h2>Contributions to Society</h2>
+      <p>{{ contributions }}</p>
+   </section>
+
+   <script src="js/app.js"></script>
+</body>
+</html>
